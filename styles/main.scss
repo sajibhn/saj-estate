@@ -4,6 +4,9 @@
 @import "./global/utils";
 @import "./global/mixins";
 
+/* =============== Reusable =============== */
+@import "./components/reusable/reusable";
+
 /* =============== Header =============== */
 @import "./components/global/header.scss";
 

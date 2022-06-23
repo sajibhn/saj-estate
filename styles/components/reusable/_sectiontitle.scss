@@ -1,0 +1,11 @@
+.section__container {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+
+  h2 {
+    font-size: 2rem;
+    color: $black;
+    margin-bottom: $m1;
+  }
+}
