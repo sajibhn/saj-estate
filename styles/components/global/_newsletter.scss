@@ -1,0 +1,30 @@
+.newsletter {
+  h3 {
+    font-size: 1.3rem;
+    margin-bottom: $m1;
+    color: $white;
+  }
+  &__inputs {
+    margin-top: $m2;
+    background-color: $white;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 15px;
+    padding: $p1;
+  }
+  &__input {
+    border: none;
+    width: 100%;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__btn {
+    border: none;
+    border-radius: 20px;
+  }
+}

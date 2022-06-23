@@ -20,11 +20,13 @@
 }
 
 .btn {
+  display: inline-block;
   padding: 1rem 2rem;
   line-height: 1;
   font-size: 1.1rem;
   border-radius: 3px;
   transition: all 0.3s ease-in;
+  cursor: pointer;
 }
 
 .btn-white {
@@ -35,4 +37,9 @@
     background-color: $black;
     color: $white;
   }
+}
+
+.btn__blue {
+  background-color: $primary;
+  color: $white;
 }

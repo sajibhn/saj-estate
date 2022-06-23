@@ -1,0 +1,17 @@
+@import "./footerinfo";
+@import "./newsletter";
+@import "./footercopy";
+.footer {
+  padding-top: $p6;
+  background-color: #001a33;
+  color: #bbbbbb;
+
+  &__container {
+    @extend .grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    @include md {
+      grid-template-columns: 1fr;
+    }
+  }
+}
