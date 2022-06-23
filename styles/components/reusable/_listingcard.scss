@@ -1,14 +1,8 @@
 .listing__card__container {
   margin-top: 60px;
   @extend .grid;
-  grid-template-columns: repeat(3, 1fr);
-
-  @include lm {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  @include md {
-    grid-template-columns: 1fr;
-  }
+  grid-template-columns: repeat(auto-fill, minmax(284px, 320px));
+  justify-content: center;
 
   .listing__card {
     box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
