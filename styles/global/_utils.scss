@@ -18,3 +18,21 @@
   align-items: center;
   justify-content: center;
 }
+
+.btn {
+  padding: 1rem 2rem;
+  line-height: 1;
+  font-size: 1.1rem;
+  border-radius: 3px;
+  transition: all 0.3s ease-in;
+}
+
+.btn-white {
+  background-color: $white;
+  color: $black;
+
+  &:hover {
+    background-color: $black;
+    color: $white;
+  }
+}
