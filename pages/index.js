@@ -2,6 +2,7 @@ import Cta from "../components/home/Cta";
 import Hero from "../components/home/Hero";
 import Listings from "../components/home/Listings";
 import Process from "../components/home/Process";
+import Testimonial from "../components/home/testimonial/Testimonial";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <Process />
       <Listings />
       <Cta />
+      <Testimonial />
     </>
   )
 }

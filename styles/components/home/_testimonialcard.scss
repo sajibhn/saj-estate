@@ -1,0 +1,48 @@
+.testimonial__container {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  @extend .grid;
+  grid-template-columns: repeat(auto-fill, minmax(284px, 320px));
+  justify-content: center;
+
+  .testimonial__card {
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+    padding: $p8 $p6;
+
+    &__head {
+      @extend .flex-center;
+      justify-content: start;
+      margin-bottom: $m2;
+      gap: 15px;
+      img {
+        width: 50px;
+        height: 50px;
+        border-radius: 100px;
+      }
+
+      .client__details {
+        h3 {
+          font-size: 1.1rem;
+          font-weight: 400;
+          color: $black;
+        }
+        span {
+          font-size: 0.8rem;
+          text-transform: capitalize;
+        }
+      }
+    }
+    &__body {
+      p {
+        margin-bottom: $m1;
+      }
+    }
+  }
+}
+
+.star-container {
+  svg {
+    width: 20px !important;
+    height: 20px !important;
+  }
+}
