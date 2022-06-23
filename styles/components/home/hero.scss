@@ -1,0 +1,28 @@
+.hero {
+  width: 100%;
+  min-height: 700px;
+  position: relative;
+  z-index: 1;
+  color: $white;
+  @extend .flex-center;
+
+  &__data {
+    max-width: 650px;
+    margin: 0 auto;
+    text-align: center;
+
+    h1 {
+      font-size: 3.5rem;
+      font-weight: 300;
+      margin-bottom: $m1;
+
+      @include md {
+        font-size: 2.2rem;
+      }
+    }
+    p {
+      font-size: 17px;
+      font-weight: 500;
+    }
+  }
+}

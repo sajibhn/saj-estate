@@ -11,6 +11,7 @@
     align-items: center;
     transition: all 0.3s ease-in-out;
     backdrop-filter: blur(10px);
+    z-index: 2;
   }
 
   .nav__list {
