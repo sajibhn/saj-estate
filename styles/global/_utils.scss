@@ -1,0 +1,20 @@
+.container {
+  max-width: 1200px;
+  width: calc(100% - 2rem);
+  margin: 0 auto;
+}
+.grid {
+  display: grid;
+  gap: 2.5rem;
+  align-items: center;
+  justify-content: space-between;
+}
+.section {
+  margin-top: 100px;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

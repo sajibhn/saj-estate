@@ -1,0 +1,21 @@
+$sm: 545px;
+$md: 768px;
+$lm: 991px;
+
+@mixin sm {
+    @media (max-width: #{$sm}){
+        @content;
+    }
+}
+
+@mixin md {
+    @media (max-width: #{$md}){
+        @content;
+    }
+}
+
+@mixin lm {
+    @media (max-width: #{$lm}){
+        @content;
+    }
+}

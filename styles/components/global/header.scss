@@ -1,0 +1,68 @@
+@import "./navlinks.scss";
+.header {
+  width: 100%;
+  background-color: $white;
+  padding: 1.5rem;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+
+  @include sm {
+    padding: 1rem;
+  }
+
+  .active {
+    .nav__menu {
+      right: 0%;
+    }
+    .nav__toggle {
+      color: $white;
+    }
+  }
+
+  .nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    & {
+      cursor: pointer;
+    }
+    &__toggle {
+      font-size: 1.5rem;
+      color: $black;
+      cursor: pointer;
+      display: none;
+
+      @include md {
+        display: block;
+      }
+    }
+
+    &__cart {
+      @include md {
+        display: none;
+      }
+
+      div {
+        background-color: $primary;
+        color: $white;
+        padding: 6px 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        @extend .flex-center;
+        gap: 10px;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          background-color: $primary-alt;
+        }
+      }
+
+      span {
+        @extend .flex-center;
+      }
+    }
+  }
+}
