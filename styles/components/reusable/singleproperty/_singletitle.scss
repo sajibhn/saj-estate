@@ -1,5 +1,7 @@
 .single__title {
-  margin: $m4 0;
+  @extend .single__shadow;
+  padding: $p6 $p2;
+
   &__container {
     @extend .grid;
     grid-template-columns: repeat(2, 1fr);

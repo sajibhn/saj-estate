@@ -1,2 +1,25 @@
 @import "./singletitle";
 @import "./propertyslider";
+@import "./userinfo";
+
+.single__property {
+  padding: $p6 0;
+  background-color: #f7f8f9;
+
+  &__container {
+    @extend .grid;
+    grid-template-columns: 4fr 1fr;
+    align-items: flex-start;
+    gap: 3rem;
+
+    @include lm {
+      grid-template-columns: 1fr;
+    }
+
+    .single__property__one {
+      @include lm {
+        order: 2;
+      }
+    }
+  }
+}

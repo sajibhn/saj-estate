@@ -1,0 +1,41 @@
+.user__info {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: $p8 $p2;
+  @extend .single__shadow;
+  @include lm {
+    padding: $p3 0;
+  }
+  h3 {
+    color: $primary;
+    font-size: 1.3rem;
+    font-weight: 400;
+  }
+
+  img {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+  }
+
+  h4 {
+    font-size: 1rem;
+    color: $black;
+  }
+
+  .user__social {
+    div {
+      @extend .flex-center;
+      gap: 10px;
+
+      span {
+        @extend .flex-center;
+      }
+    }
+  }
+}
