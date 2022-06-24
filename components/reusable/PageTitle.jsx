@@ -3,7 +3,7 @@ import React from 'react'
 const PageTitle = ({ title }) => {
     return (
         <div className="page__title">
-            <h2>About</h2>
+            <h2>{title}</h2>
         </div>
     )
 }

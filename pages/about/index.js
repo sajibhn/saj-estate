@@ -8,7 +8,7 @@ const About = () => {
 
     return (
         <>
-            <PageTitle />
+            <PageTitle title="about" />
             <AboutDetails />
             <Team />
             <Testimonial />

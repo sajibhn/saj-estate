@@ -1,0 +1,12 @@
+@import "./contactform";
+@import "./contactdetails";
+
+.contact {
+  &__container {
+    @extend .grid;
+    grid-template-columns: 2fr 1fr;
+    @include md {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}

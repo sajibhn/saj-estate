@@ -1,0 +1,44 @@
+.contact__form {
+  p {
+    margin-bottom: $m3;
+  }
+
+  .form {
+    @extend .grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    .btn__input {
+      font-size: 1rem;
+      border: none;
+      display: block;
+      width: 100%;
+      text-transform: capitalize;
+    }
+    &__inputs {
+      @extend .grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      @include md {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+    }
+
+    &__label {
+      font-size: 0.9rem;
+      font-weight: 500;
+      display: block;
+      line-height: 1.8;
+      color: $black;
+    }
+    &__input {
+      width: 100%;
+      border: 1px solid #dce0e0;
+      padding: 0.5rem;
+
+      &:focus {
+        outline: 2px solid #dce0e0;
+      }
+    }
+  }
+}

@@ -42,4 +42,9 @@
 .btn__blue {
   background-color: $primary;
   color: $white;
+
+  &:hover {
+    background-color: $primary-alt;
+    color: $white;
+  }
 }
