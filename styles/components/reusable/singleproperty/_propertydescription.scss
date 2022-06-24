@@ -1,0 +1,9 @@
+.property__description {
+  margin-top: $m6;
+  @extend .single__shadow;
+  padding: $p6 $p2;
+
+  h3 {
+    @extend .property__heading;
+  }
+}
