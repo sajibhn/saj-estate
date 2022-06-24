@@ -1,0 +1,12 @@
+.page__title {
+  background-color: $primary;
+  padding: $p10 0;
+
+  h2 {
+    font-size: 2.5rem;
+    color: $white;
+    text-align: center;
+    font-weight: 400;
+    letter-spacing: 2px;
+  }
+}

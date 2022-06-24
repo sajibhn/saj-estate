@@ -1,0 +1,20 @@
+.about__details {
+  &__container {
+    margin-top: 60px;
+    @extend .grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    @include md {
+      grid-template-columns: 1fr;
+    }
+
+    .about__data {
+      h3 {
+        font-size: 1.1rem;
+        color: $black;
+        font-weight: 400;
+        margin-bottom: $m2;
+      }
+    }
+  }
+}
