@@ -54,3 +54,12 @@
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
     rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }
+
+.property__heading {
+  font-size: 1.2rem;
+  color: $black;
+  font-weight: 400;
+  padding-bottom: $p3;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: $m4;
+}

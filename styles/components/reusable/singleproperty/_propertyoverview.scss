@@ -1,0 +1,36 @@
+.property__overview {
+  margin-top: $m6;
+  @extend .single__shadow;
+  padding: $p6 $p2;
+
+  h3 {
+    @extend .property__heading;
+  }
+
+  &__container {
+    @extend .grid;
+    grid-template-columns: repeat(auto-fill, minmax(124px, 130px));
+
+    .property__item {
+      h5 {
+        font-size: 1.1rem;
+        color: $black;
+      }
+
+      &__title {
+        font-size: 1rem;
+        font-weight: 400;
+      }
+
+      .icon__container {
+        @extend .flex-center;
+        justify-content: flex-start;
+        gap: 5px;
+
+        span {
+          @extend .flex-center;
+        }
+      }
+    }
+  }
+}

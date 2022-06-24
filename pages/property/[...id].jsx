@@ -1,4 +1,5 @@
 import React from 'react'
+import PropertyOverview from '../../components/reusable/singleProperty/PropertyOverview'
 import PropertySlider from '../../components/reusable/singleProperty/PropertySlider'
 import SingleTitle from '../../components/reusable/singleProperty/SingleTitle'
 import UserInfo from '../../components/reusable/singleProperty/UserInfo'
@@ -10,7 +11,8 @@ const SingleProperty = () => {
                 <div className="single__property__container container">
                     <div className='single__property__one'>
                         <SingleTitle />
-                        <PropertySlider />
+                        {/* <PropertySlider /> */}
+                        <PropertyOverview />
                     </div>
                     <div className='single__property__two'>
                         <UserInfo />
