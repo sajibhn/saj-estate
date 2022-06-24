@@ -1,6 +1,10 @@
 import React from 'react'
 
 const ContactForm = () => {
+    const formHandler = (e) => {
+        e.preventDefault()
+        return alert('the form is not dynamic!')
+    }
     return (
         <div className="contact__form">
             <p>
@@ -30,7 +34,7 @@ const ContactForm = () => {
                 </div>
 
                 <div>
-                    <input type="submit" value="submit" className='btn btn__blue btn__input' />
+                    <input type="submit" value="submit" onClick={formHandler} className='btn btn__blue btn__input' />
                 </div>
             </form>
         </div>

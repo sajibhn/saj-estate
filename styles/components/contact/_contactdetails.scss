@@ -1,0 +1,28 @@
+.contact__details {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    .contact__details__one,
+    .contact__details__two {
+      padding: $p2;
+      background-color: $white;
+      box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+    }
+    h4 {
+      font-size: 0.9rem;
+      color: $black;
+      margin-bottom: $m2;
+    }
+
+    .person__info {
+      margin-bottom: $m2;
+      h4 {
+        margin-bottom: $m1;
+      }
+      p {
+        max-width: 220px;
+      }
+    }
+  }
+}

@@ -2,9 +2,11 @@
 @import "./contactdetails";
 
 .contact {
+  background-color: #f7f8f9;
   &__container {
     @extend .grid;
     grid-template-columns: 2fr 1fr;
+    align-items: start;
     @include md {
       grid-template-columns: repeat(1, 1fr);
     }
