@@ -3,7 +3,7 @@ import { FaMapMarkerAlt } from 'react-icons/fa'
 
 const SingleTitle = () => {
     return (
-        <section className="section single__title">
+        <section className="single__title">
             <div className="single__title__container container">
                 <div className="single__title__left">
                     <h3>New Apartment</h3>

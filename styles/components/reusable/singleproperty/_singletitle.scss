@@ -1,8 +1,13 @@
 .single__title {
+  margin: $m4 0;
   &__container {
     @extend .grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: flex-start;
+
+    @include sm {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 
   &__left {
@@ -30,6 +35,9 @@
 
   &__right {
     text-align: right;
+    @include sm {
+      text-align: initial;
+    }
     h3 {
       font-size: 1.4rem;
       font-weight: 600;
