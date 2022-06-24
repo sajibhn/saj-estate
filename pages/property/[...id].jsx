@@ -9,10 +9,10 @@ const SingleProperty = () => {
     return (
         <>
             <section className="single__property">
+                <PropertySlider />
                 <div className="single__property__container container">
                     <div className='single__property__one'>
                         <SingleTitle />
-                        {/* <PropertySlider /> */}
                         <PropertyOverview />
                         <PropertyDescription />
                     </div>

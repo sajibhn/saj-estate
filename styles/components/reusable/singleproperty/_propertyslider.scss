@@ -1,0 +1,15 @@
+.slider__content {
+  max-width: 900px;
+  margin-bottom: $m6;
+  .slider__data {
+    .slider__img {
+      position: relative;
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        display: block;
+      }
+    }
+  }
+}
