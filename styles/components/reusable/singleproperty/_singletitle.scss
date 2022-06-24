@@ -1,0 +1,44 @@
+.single__title {
+  &__container {
+    @extend .grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: flex-start;
+  }
+
+  &__left {
+    h3 {
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: $black;
+    }
+    .category {
+      font-size: 9px;
+      text-transform: uppercase;
+      background-color: #565757;
+      color: $white;
+      padding: 5px;
+      border-radius: 3px;
+      margin: $m2 0;
+      display: inline-block;
+    }
+    .address {
+      @extend .flex-center;
+      gap: 5px;
+      justify-content: flex-start;
+    }
+  }
+
+  &__right {
+    text-align: right;
+    h3 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: $black;
+      margin-bottom: $m1;
+    }
+    span {
+      font-size: 1.1rem;
+      display: block;
+    }
+  }
+}
