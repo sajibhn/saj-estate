@@ -10,11 +10,11 @@ const TestimonialCard = () => {
     return (
         <div className="testimonial__container container">
 
-            {data.testimonialCards.data.map((testimonial) => {
+            {data.testimonialCards.data.map((testimonial, index) => {
                 const { client_image, client_name, client_postion, client_rating, client_review } = testimonial.attributes
                 return (
                     <>
-                        <div className="testimonial__card">
+                        <div className="testimonial__card" key={index}>
                             <div className="testimonial__card__head">
                                 <img src={`http://localhost:1337${client_image.data.attributes.url}`} alt="image" />
                                 <div className='client__details'>

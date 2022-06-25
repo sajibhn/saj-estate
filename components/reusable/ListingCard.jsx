@@ -2,111 +2,50 @@ import Image from 'next/image'
 import React from 'react'
 import { MdBed } from 'react-icons/md'
 import { FaShower } from 'react-icons/fa'
-import { BsArrowsFullscreen } from 'react-icons/bs'
+import { AiFillCar } from 'react-icons/ai'
+import Link from 'next/link'
 
-const ListingCard = () => {
+const ListingCard = ({ data }) => {
     return (
         <div className="listing__card__container">
-            <div className="listing__card">
-                <div className="listing__card__head">
-                    <img src='https://wpresidence.net/wp-content/uploads/2017/11/house_nice_2-525x328.jpg' />
-                </div>
-                <div className="listing__card__body">
-                    <p>194 Mercer Street, 627 Broadway, New York, NY 10012, USA</p>
-                    <h3>Luxury House in Greenville</h3>
-                    <span className='price'>$ 86,000</span>
-                    <p>This property is mostly wooded and sits high on a hilltop overlooking the Mohawk River Val ...</p>
-                    <div className="listing__card__info">
-                        <div>
-                            <span><MdBed /></span>
-                            <span>5</span>
-                        </div>
-                        <div>
-                            <FaShower />
-                            <span>5</span>
-                        </div>
-                        <div>
-                            <BsArrowsFullscreen />
-                            <span>5</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div className="listing__card">
-                <div className="listing__card__head">
-                    <img src='https://wpresidence.net/wp-content/uploads/2017/11/house_nice_2-525x328.jpg' />
-                </div>
-                <div className="listing__card__body">
-                    <p>194 Mercer Street, 627 Broadway, New York, NY 10012, USA</p>
-                    <h3>Luxury House in Greenville</h3>
-                    <span className='price'>$ 86,000</span>
-                    <p>This property is mostly wooded and sits high on a hilltop overlooking the Mohawk River Val ...</p>
-                    <div className="listing__card__info">
-                        <div>
-                            <span><MdBed /></span>
-                            <span>5</span>
-                        </div>
-                        <div>
-                            <FaShower />
-                            <span>5</span>
-                        </div>
-                        <div>
-                            <BsArrowsFullscreen />
-                            <span>5</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div className="listing__card">
-                <div className="listing__card__head">
-                    <img src='https://wpresidence.net/wp-content/uploads/2017/11/house_nice_2-525x328.jpg' />
-                </div>
-                <div className="listing__card__body">
-                    <p>194 Mercer Street, 627 Broadway, New York, NY 10012, USA</p>
-                    <h3>Luxury House in Greenville</h3>
-                    <span className='price'>$ 86,000</span>
-                    <p>This property is mostly wooded and sits high on a hilltop overlooking the Mohawk River Val ...</p>
-                    <div className="listing__card__info">
-                        <div>
-                            <span><MdBed /></span>
-                            <span>5</span>
-                        </div>
-                        <div>
-                            <FaShower />
-                            <span>5</span>
-                        </div>
-                        <div>
-                            <BsArrowsFullscreen />
-                            <span>5</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div className="listing__card">
-                <div className="listing__card__head">
-                    <img src='https://wpresidence.net/wp-content/uploads/2017/11/house_nice_2-525x328.jpg' />
-                </div>
-                <div className="listing__card__body">
-                    <p>194 Mercer Street, 627 Broadway, New York, NY 10012, USA</p>
-                    <h3>Luxury House in Greenville</h3>
-                    <span className='price'>$ 86,000</span>
-                    <p>This property is mostly wooded and sits high on a hilltop overlooking the Mohawk River Val ...</p>
-                    <div className="listing__card__info">
-                        <div>
-                            <span><MdBed /></span>
-                            <span>5</span>
-                        </div>
-                        <div>
-                            <FaShower />
-                            <span>5</span>
-                        </div>
-                        <div>
-                            <BsArrowsFullscreen />
-                            <span>5</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
+            {
+                data?.listings?.data?.map((item, index) => {
+                    const { title, location, price, description, bedrooms, bathrooms, garage, featured_image } = item.attributes
+                    const fImage = featured_image.data.attributes.url
+                    return (
+                        <>
+                            <Link href={`/property/${index}`}>
+                                <div className="listing__card" key={index}>
+                                    <div className="listing__card__head">
+                                        <img src={`http://localhost:1337${fImage}`} />
+                                    </div>
+                                    <div className="listing__card__body">
+                                        <p>{location}</p>
+                                        <h3>{title}</h3>
+                                        <span className='price'>$ {price}</span>
+                                        <p>{description?.substring(0, 75)} ...</p>
+                                        <div className="listing__card__info">
+                                            <div>
+                                                <span><MdBed /></span>
+                                                <span>{bedrooms}</span>
+                                            </div>
+                                            <div>
+                                                <FaShower />
+                                                <span>{bathrooms}</span>
+                                            </div>
+                                            <div>
+                                                <AiFillCar />
+                                                <span>{garage}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </Link>
+                        </>
+                    )
+                })
+            }
         </div>
     )
 }
