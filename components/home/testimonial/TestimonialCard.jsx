@@ -7,7 +7,6 @@ const TestimonialCard = () => {
     const { loading, error, data } = HomeState()
     if (loading) return <p>Loading</p>
     if (error) return <p>There is an error</p>
-    console.log(data.testimonialCards.data[0].attributes)
     return (
         <div className="testimonial__container container">
 

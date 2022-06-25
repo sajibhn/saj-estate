@@ -2,6 +2,7 @@ import '../styles/main.scss'
 import Header from "../components/global/Header/Header"
 import Footer from '../components/global/Footer/Footer'
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client'
+import FooterContext from '../data/FooterContext'
 
 const client = new ApolloClient({
   uri: 'http://localhost:1337/graphql',
@@ -13,7 +14,9 @@ function MyApp({ Component, pageProps }) {
     <ApolloProvider client={client}>
       <Header />
       <Component {...pageProps} />
-      <Footer />
+      <FooterContext>
+        <Footer />
+      </FooterContext>
     </ApolloProvider>
   </>
 }
