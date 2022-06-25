@@ -33,7 +33,7 @@ const ProcessCards = gql`
     processCards {
       data {
         attributes {
-          icon
+          number
           title
           description
         }
@@ -61,17 +61,17 @@ const ProcessCards = gql`
 
 const HomeContext = ({ children }) => {
 
-    const { loading, error, data } = useQuery(ProcessCards);
+  const { loading, error, data } = useQuery(ProcessCards);
 
-    return (
-        <homeData.Provider value={{ loading, error, data }}>
-            {children}
-        </homeData.Provider>
-    );
+  return (
+    <homeData.Provider value={{ loading, error, data }}>
+      {children}
+    </homeData.Provider>
+  );
 };
 
 export default HomeContext;
 
 export const HomeState = () => {
-    return useContext(homeData);
+  return useContext(homeData);
 };

@@ -1,40 +1,30 @@
 import React from "react";
-import { FaMap } from "react-icons/fa";
-
-
-
+import { HomeState } from "../../data/HomeContext";
 
 const ProcessCard = () => {
-
+    const { loading, error, data } = HomeState()
+    if (loading) return <p>Loading</p>
+    if (error) return <p>There is an error</p>
     return (
         <div className="process__card__container">
-            <div className="process__card">
-                <FaMap />
-                <h3>Evaluate Property</h3>
-                <p>
-                    of passages of Lorem Ipsum available, but the majority have Ipsum
-                    available.
-                </p>
-            </div>
 
-            <div className="process__card">
-                <FaMap />
-                <h3>Evaluate Property</h3>
-                <p>
-                    of passages of Lorem Ipsum available, but the majority have Ipsum
-                    available.
-                </p>
-            </div>
-
-            <div className="process__card">
-                <FaMap />
-                <h3>Evaluate Property</h3>
-                <p>
-                    of passages of Lorem Ipsum available, but the majority have Ipsum
-                    available.
-                </p>
-            </div>
-        </div>
+            {
+                data.processCards.data.map((card, index) => {
+                    const { number, title, description } = card.attributes
+                    return (
+                        <>
+                            <div className="process__card" key={index}>
+                                <span>{number}</span>
+                                <h3>{title}</h3>
+                                <p>
+                                    {description}
+                                </p>
+                            </div>
+                        </>
+                    )
+                })
+            }
+        </div >
     );
 };
 

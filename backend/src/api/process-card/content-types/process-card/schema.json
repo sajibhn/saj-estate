@@ -12,7 +12,7 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "icon": {
+    "number": {
       "type": "string",
       "required": true
     },

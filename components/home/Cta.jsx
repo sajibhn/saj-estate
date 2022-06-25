@@ -1,13 +1,17 @@
 import React from 'react'
 import Link from 'next/link'
-
+import { HomeState } from '../../data/HomeContext'
 const Cta = () => {
+    const { loading, error, data } = HomeState()
+    if (loading) return <p>Loading</p>
+    if (error) return <p>There is an error</p>
+    const { cta_title, cta_description } = data.home.data.attributes;
     return (
         <section className="section cta">
             <div className="cta__container container">
                 <div className="cta__text">
-                    <h2>Rent Your Dream Home</h2>
-                    <p>We are recognized for exceeding client expectations and delivering great results through dedication, ease of process, and extraordinary services to our worldwide clients.</p>
+                    <h2>{cta_title}</h2>
+                    <p>{cta_description}</p>
                 </div>
                 <cta className="cta__btn">
                     <Link href='/contact'>
