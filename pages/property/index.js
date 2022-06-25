@@ -1,8 +1,12 @@
 import React from 'react'
-
+import ListingCard from '../../components/reusable/ListingCard'
 const index = () => {
     return (
-        <div>index</div>
+        <div>
+            <div className="home__listing__container container">
+                <ListingCard />
+            </div>
+        </div>
     )
 }
 

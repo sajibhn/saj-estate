@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "process_cards",
+  "info": {
+    "singularName": "process-card",
+    "pluralName": "process-cards",
+    "displayName": "processcard",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "icon": {
+      "type": "string",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

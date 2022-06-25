@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "testimonial_cards",
+  "info": {
+    "singularName": "testimonial-card",
+    "pluralName": "testimonial-cards",
+    "displayName": "testimonialcard",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "client_image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "client_name": {
+      "type": "string",
+      "required": true
+    },
+    "client_postion": {
+      "type": "string",
+      "default": "happy seller",
+      "required": true
+    },
+    "client_review": {
+      "type": "text",
+      "required": true
+    },
+    "client_rating": {
+      "type": "integer",
+      "default": 5,
+      "required": true
+    }
+  }
+}

@@ -1,14 +1,19 @@
-import React from 'react'
-import { FaMap } from 'react-icons/fa';
+import React from "react";
+import { FaMap } from "react-icons/fa";
 
-const ProcessCard = ({ icon, title, description }) => {
+
+
+
+const ProcessCard = () => {
+
     return (
         <div className="process__card__container">
             <div className="process__card">
                 <FaMap />
                 <h3>Evaluate Property</h3>
                 <p>
-                    of passages of Lorem Ipsum available, but the majority have Ipsum available.
+                    of passages of Lorem Ipsum available, but the majority have Ipsum
+                    available.
                 </p>
             </div>
 
@@ -16,7 +21,8 @@ const ProcessCard = ({ icon, title, description }) => {
                 <FaMap />
                 <h3>Evaluate Property</h3>
                 <p>
-                    of passages of Lorem Ipsum available, but the majority have Ipsum available.
+                    of passages of Lorem Ipsum available, but the majority have Ipsum
+                    available.
                 </p>
             </div>
 
@@ -24,11 +30,12 @@ const ProcessCard = ({ icon, title, description }) => {
                 <FaMap />
                 <h3>Evaluate Property</h3>
                 <p>
-                    of passages of Lorem Ipsum available, but the majority have Ipsum available.
+                    of passages of Lorem Ipsum available, but the majority have Ipsum
+                    available.
                 </p>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default ProcessCard
+export default ProcessCard;

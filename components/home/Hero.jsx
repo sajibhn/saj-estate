@@ -1,16 +1,22 @@
 import React from 'react'
+import { HomeState } from '../../data/HomeContext'
 
 const Hero = () => {
+    const { loading, error, data } = HomeState()
+    if (loading) return <p>Loading</p>
+    if (error) return <p>There is an error</p>
+    const { hero_title, hero_description, hero_bg } = data.home.data.attributes;
+    const backgroundImage = hero_bg.data.attributes.url;
     const bgImage = `linear-gradient(rgba(6, 42, 71, 0.705), rgba(6, 42, 71, 0.705)),
-    url(https://wpresidence.net/wp-content/uploads/2021/12/wpresidece-header.jpg)`
+    url(http://localhost:1337${backgroundImage})`
     return (
         <section className="hero" style={{ backgroundImage: bgImage }}>
             <div className='hero__overlay'></div>
             <div className='hero__container'>
                 <div className='hero__data' >
-                    <h1>Find Your Dream Home</h1>
+                    <h1>{hero_title}</h1>
                     <p>
-                        We are recognized for exceeding client expectations and delivering great results through dedication, ease of process, and extraordinary services to our worldwide clients.
+                        {hero_description}
                     </p>
                 </div>
             </div>
