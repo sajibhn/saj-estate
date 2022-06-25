@@ -10,7 +10,7 @@ import "swiper/css/navigation";
 
 import { Pagination, Navigation } from "swiper";
 
-const PropertySlider = () => {
+const PropertySlider = ({ listingData }) => {
     return (
         <div className="slider__content container">
             <Swiper
@@ -21,21 +21,19 @@ const PropertySlider = () => {
                 modules={[Pagination, Navigation]}
                 className="mySwiper"
             >
-
-                <SwiperSlide >
-                    <div className="slider__data">
-                        <div className="slider__img">
-                            <img src='https://432351-1355220-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2016/03/043-1170x785.jpg' alt="" />
-                        </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide >
-                    <div className="slider__data">
-                        <div className="slider__img">
-                            <img src='https://432351-1355220-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2016/03/043-1170x785.jpg' alt="" />
-                        </div>
-                    </div>
-                </SwiperSlide>
+                {listingData.attributes.gallery.data.map((item, index) => {
+                    return (
+                        <>
+                            <SwiperSlide >
+                                <div className="slider__data" key={index}>
+                                    <div className="slider__img">
+                                        <img src={`http://localhost:1337${item.attributes.url}`} alt="" />
+                                    </div>
+                                </div>
+                            </SwiperSlide>
+                        </>
+                    )
+                })}
 
             </Swiper>
         </div>

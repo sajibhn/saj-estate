@@ -3,13 +3,14 @@ import { BiBed } from 'react-icons/bi'
 import { FaShower } from 'react-icons/fa'
 import { AiFillCar, AiFillBuild, AiFillCalendar } from 'react-icons/ai'
 
-const PropertyOverview = () => {
+const PropertyOverview = ({ listingData }) => {
+    const { property_type, bedrooms, bathrooms, garage, sq_ft, year_built } = listingData.attributes
     return (
         <section className="property__overview">
             <h3>Overview</h3>
             <div className='property__overview__container'>
                 <div className="property__item">
-                    <h5>Studio</h5>
+                    <h5>{property_type}</h5>
                     <h4 className="property__item__title">Property Type</h4>
                 </div>
                 <div className="property__item">
@@ -18,7 +19,7 @@ const PropertyOverview = () => {
                             <BiBed />
                         </span>
                         <span>
-                            4
+                            {bedrooms}
                         </span>
                     </div>
                     <h4 className="property__item__title">Bedrooms</h4>
@@ -29,7 +30,7 @@ const PropertyOverview = () => {
                             <FaShower />
                         </span>
                         <span>
-                            2
+                            {bathrooms}
                         </span>
                     </div>
                     <h4 className='property__item__title'>Bathrooms</h4>
@@ -40,7 +41,7 @@ const PropertyOverview = () => {
                             <AiFillCar />
                         </span>
                         <span>
-                            1
+                            {garage}
                         </span>
                     </div>
                     <h4 className="property__item__title">Garage</h4>
@@ -51,7 +52,7 @@ const PropertyOverview = () => {
                             <AiFillBuild />
                         </span>
                         <span>
-                            1200
+                            {sq_ft}
                         </span>
                     </div>
                     <h4 className="property__item__title">Sq Ft</h4>
@@ -62,7 +63,7 @@ const PropertyOverview = () => {
                             <AiFillCalendar />
                         </span>
                         <span>
-                            2016
+                            {year_built}
                         </span>
                     </div>
                     <h4 className="property__item__title">Year Built</h4>

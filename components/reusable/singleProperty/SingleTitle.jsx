@@ -1,25 +1,26 @@
 import React from 'react'
 import { FaMapMarkerAlt } from 'react-icons/fa'
 
-const SingleTitle = () => {
+const SingleTitle = (listingData) => {
+    const { title, type, location, price, area } = listingData.listingData.attributes
     return (
         <section className="single__title">
             <div className="single__title__container">
                 <div className="single__title__left">
-                    <h3>New Apartment</h3>
-                    <span className='category'>for sale</span>
+                    <h3>{title}</h3>
+                    <span className='category'>{type}</span>
                     <div className='address'>
                         <span>
                             <FaMapMarkerAlt />
                         </span>
                         <span>
-                            6701 South Dixie Highway, Miami, FL, USA
+                            {location}
                         </span>
                     </div>
                 </div>
                 <div className="single__title__right">
-                    <h3>$125,000</h3>
-                    <span>$900/sq Ft</span>
+                    <h3>${price}</h3>
+                    <span>{area}</span>
                 </div>
             </div>
         </section>
