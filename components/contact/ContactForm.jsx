@@ -1,6 +1,11 @@
 import React from 'react'
+import { ContactState } from '../../data/ContactContext'
 
 const ContactForm = () => {
+    const { loading, error, data } = ContactState()
+    if (loading) return <p>Loading ...</p>
+    if (error) return <p>there is a error</p>
+
     const formHandler = (e) => {
         e.preventDefault()
         return alert('the form is not dynamic!')
@@ -8,7 +13,7 @@ const ContactForm = () => {
     return (
         <div className="contact__form">
             <p>
-                Design your custom contact forms with this Houzez Elementor custom widget and connect your leads with the integrated Houzez CRM.
+                {data.contact.data.attributes.contact_description}
             </p>
 
             <form className='form'>
