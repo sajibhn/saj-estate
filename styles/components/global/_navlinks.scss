@@ -45,17 +45,43 @@
       font-weight: 400;
       font-size: 1rem;
       line-height: 1.5;
+      padding-bottom: $p1;
       letter-spacing: 0.00938em;
       transition: all 0.3s ease-in-out;
+      position: relative;
+
+      &::before {
+        content: "";
+        display: block;
+        border-bottom: 2px solid $primary;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        opacity: 0;
+        transition: all 0.35s ease-in-out;
+
+        @include md {
+          display: none;
+        }
+      }
 
       &:hover {
         color: $primary;
+      }
+
+      &:hover::before {
+        opacity: 1;
       }
 
       @include md {
         font-size: 1.2rem;
         color: $white;
       }
+    }
+
+    .link__active {
+      color: $primary;
     }
   }
 

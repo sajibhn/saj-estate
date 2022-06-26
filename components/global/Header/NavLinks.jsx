@@ -1,9 +1,11 @@
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import React, { useState } from 'react'
 import { navLinks } from '../../../data/navLinks'
 
 const NavLinks = ({ menuOpen, setMenuOpen }) => {
     const [links, setLinks] = useState(navLinks);
+    const router = useRouter();
     return (
         <div className="nav__menu">
             <ul className="nav__list">
@@ -13,7 +15,7 @@ const NavLinks = ({ menuOpen, setMenuOpen }) => {
                         return (
                             <li className="nav__item" key={id} onClick={() => setMenuOpen(!menuOpen)}>
                                 <Link href={value}>
-                                    <a className="nav__link">{title}</a>
+                                    <a className={router.pathname == value ? 'link__active nav__link' : 'nav__link'}>{title}</a>
                                 </Link>
                             </li>
                         )
