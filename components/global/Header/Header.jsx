@@ -15,14 +15,6 @@ const Header = () => {
                     </div>
 
                     <NavLinks menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-                    <div className="nav__cart">
-                        <Link href='/cart'>
-                            <div>
-                                <span><AiFillHeart /></span>
-                                <span>Favourites</span>
-                            </div>
-                        </Link>
-                    </div>
                     <div className="nav__toggle" onClick={() => setMenuOpen(!menuOpen)}>
                         {menuOpen ? <AiOutlineClose /> : <GiHamburgerMenu />}
                     </div>
