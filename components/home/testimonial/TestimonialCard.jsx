@@ -1,12 +1,8 @@
 import React from 'react'
 import StarRatings from 'react-star-ratings';
-import { HomeState } from '../../../data/HomeContext';
 
-
-const TestimonialCard = () => {
-    const { loading, error, data } = HomeState()
+const TestimonialCard = ({ data, loading }) => {
     if (loading) return <p>Loading</p>
-    if (error) return <p>There is an error</p>
     return (
         <div className="testimonial__container container">
 

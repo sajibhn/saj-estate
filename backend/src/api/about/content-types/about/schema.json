@@ -1,0 +1,36 @@
+{
+  "kind": "singleType",
+  "collectionName": "abouts",
+  "info": {
+    "singularName": "about",
+    "pluralName": "abouts",
+    "displayName": "About",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "page_title": {
+      "type": "string",
+      "required": true
+    },
+    "about_details_title": {
+      "type": "string",
+      "required": true
+    },
+    "about_details_description": {
+      "type": "text",
+      "required": true
+    },
+    "team_title": {
+      "type": "string",
+      "required": true
+    },
+    "team_details": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

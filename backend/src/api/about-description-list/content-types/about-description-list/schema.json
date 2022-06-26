@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "about_description_lists",
+  "info": {
+    "singularName": "about-description-list",
+    "pluralName": "about-description-lists",
+    "displayName": "About Description List"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    }
+  }
+}
