@@ -5,12 +5,13 @@ import { FaShower } from 'react-icons/fa'
 import { AiFillCar } from 'react-icons/ai'
 import Link from 'next/link'
 
-const ListingCard = ({ data }) => {
+const ListingCard = ({ data, simplified }) => {
+    const count = simplified ? 3 : data?.listings?.data?.length
     return (
         <div className="listing__card__container">
 
             {
-                data?.listings?.data?.map((item, index) => {
+                data?.listings?.data?.slice(0, count).map((item, index) => {
                     const { title, location, price, description, bedrooms, bathrooms, garage, featured_image } = item.attributes
                     const fImage = featured_image.data.attributes.url
                     return (

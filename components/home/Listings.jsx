@@ -13,7 +13,7 @@ const Listings = () => {
         <section className="section home__listings">
             <SectionTitle title={listing_title} description={listing_description} />
             <div className="home__listing__container container">
-                <ListingCard />
+                <ListingCard data={data} simplified />
             </div>
         </section>
     )

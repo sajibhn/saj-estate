@@ -56,6 +56,27 @@ const ProcessCards = gql`
         }
       }
     }
+    listings{
+    data{
+      attributes{
+        featured_image{
+          data{
+            attributes{
+              url
+            }
+          }
+        }
+        title
+        location
+        price
+        area
+        bedrooms
+        bathrooms
+        garage
+        description
+      }
+    }
+  }
   }
 `;
 
