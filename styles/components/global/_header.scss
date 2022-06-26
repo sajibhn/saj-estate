@@ -2,7 +2,7 @@
 .header {
   width: 100%;
   background-color: $white;
-  padding: 1.5rem;
+  padding: 1rem;
 
   @include sm {
     padding: 1rem;
@@ -23,7 +23,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    & {
+
+    &__logo {
+      line-height: 1;
       cursor: pointer;
     }
     &__toggle {
@@ -35,31 +37,6 @@
       @include md {
         display: block;
         z-index: 5;
-      }
-    }
-
-    &__cart {
-      @include md {
-        display: none;
-      }
-
-      div {
-        background-color: $primary;
-        color: $white;
-        padding: 6px 16px;
-        border-radius: 5px;
-        cursor: pointer;
-        @extend .flex-center;
-        gap: 10px;
-        transition: all 0.3s ease-in-out;
-
-        &:hover {
-          background-color: $primary-alt;
-        }
-      }
-
-      span {
-        @extend .flex-center;
       }
     }
   }

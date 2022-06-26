@@ -28,14 +28,16 @@ const ListingCard = ({ data, simplified, loading }) => {
     if (loading) return <p>Loading....</p>
     return (
         <>
-            <div className="filter">
-                <h2>Filter</h2>
-                <div className="filter__buttons">
-                    <button key={1} className={active === '1' ? 'filter_active' : undefined} id={'1'} onClick={All}>all</button>
-                    <button key={2} className={active === '2' ? 'filter_active' : undefined} id={'2'} onClick={ForSell}>for sell</button>
-                    <button key={3} className={active === '3' ? 'filter_active' : undefined} id={'3'} onClick={ForRent}>for rent</button>
+            {!simplified && <>
+                <div className="filter">
+                    <h2>Filter</h2>
+                    <div className="filter__buttons">
+                        <button key={1} className={active === '1' ? 'filter_active' : undefined} id={'1'} onClick={All}>all</button>
+                        <button key={2} className={active === '2' ? 'filter_active' : undefined} id={'2'} onClick={ForSell}>for sell</button>
+                        <button key={3} className={active === '3' ? 'filter_active' : undefined} id={'3'} onClick={ForRent}>for rent</button>
+                    </div>
                 </div>
-            </div>
+            </>}
             <div className="listing__card__container">
 
                 {
