@@ -1,5 +1,6 @@
 
 import React, { useRef, useState } from "react";
+import Image from 'next/image'
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -27,7 +28,7 @@ const PropertySlider = ({ listingData }) => {
                             <SwiperSlide >
                                 <div className="slider__data" key={index}>
                                     <div className="slider__img">
-                                        <img src={`http://localhost:1337${item.attributes.url}`} alt="" />
+                                        <Image src={`http://localhost:1337${item.attributes.url}`} alt="slider image" width={900} height={603} />
                                     </div>
                                 </div>
                             </SwiperSlide>
