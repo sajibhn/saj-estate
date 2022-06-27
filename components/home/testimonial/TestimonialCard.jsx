@@ -13,7 +13,7 @@ const TestimonialCard = ({ data, loading }) => {
                     <>
                         <div className="testimonial__card" key={index}>
                             <div className="testimonial__card__head">
-                                <Image src={`http://localhost:1337${client_image.data.attributes.url}`} alt="testimonial image" width={50} height={50} />
+                                <Image src={client_image.data.attributes.url} alt="testimonial image" width={50} height={50} />
                                 <div className='client__details'>
                                     <h3>{client_name}</h3>
                                     <span>{client_postion}</span>

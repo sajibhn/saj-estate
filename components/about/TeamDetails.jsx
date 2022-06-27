@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram } from 'react-icons/fa'
 import { AboutState } from '../../data/AboutContext'
 
@@ -17,7 +18,7 @@ const TeamDetails = () => {
                         <>
                             <div className="team__card" key={item.id}>
                                 <div className="team__card__head">
-                                    <img src={`http://localhost:1337${fImage}`} />
+                                    <Image src={fImage} alt="team image" width={353} height={231} />
                                 </div>
                                 <div className="team__card__body">
                                     <h3>{name}</h3>

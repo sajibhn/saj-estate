@@ -1,12 +1,13 @@
 import React from 'react'
 import { FaMapMarkerAlt } from 'react-icons/fa'
 import { BsTelephoneFill, BsFillEnvelopeFill } from 'react-icons/bs'
+import Image from 'next/image'
 
 const UserInfo = () => {
     return (
         <div className="user__info">
             <h3>Seller</h3>
-            <img src="https://wpresidence.net/wp-content/uploads/2021/08/team3-e1629289062721.jpeg" alt="" />
+            <Image src="/seller.jpeg" alt="seller image" width={50} height={50} />
             <h4>John Doe</h4>
             <div className="user__social">
                 <div>

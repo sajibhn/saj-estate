@@ -49,7 +49,7 @@ const ListingCard = ({ data, simplified, loading }) => {
                                 <Link href={`/property/${index}`}>
                                     <div className="listing__card" key={index}>
                                         <div className="listing__card__head">
-                                            <Image src={`http://localhost:1337${fImage}`} width={320} height={214} alt="listing img" />
+                                            <Image src={fImage} width={320} height={214} alt="listing img" />
                                         </div>
                                         <div className="listing__card__body">
                                             <p>{location}</p>

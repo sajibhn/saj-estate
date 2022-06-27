@@ -8,7 +8,7 @@ const Hero = () => {
     const { hero_title, hero_description, hero_bg } = data.home.data.attributes;
     const backgroundImage = hero_bg.data.attributes.url;
     const bgImage = `linear-gradient(rgba(6, 42, 71, 0.705), rgba(6, 42, 71, 0.705)),
-    url(http://localhost:1337${backgroundImage})`
+    url(${backgroundImage})`
     return (
         <section className="hero" style={{ backgroundImage: bgImage }}>
             <div className='hero__overlay'></div>
