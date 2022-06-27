@@ -1,24 +1,32 @@
-import '../styles/main.scss'
-import Header from "../components/global/Header/Header"
-import Footer from '../components/global/Footer/Footer'
-import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client'
-import FooterContext from '../data/FooterContext'
+import "../styles/main.scss";
+import Header from "../components/global/Header/Header";
+import Footer from "../components/global/Footer/Footer";
+import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
+import FooterContext from "../data/FooterContext";
+import Head from "next/head";
 
 const client = new ApolloClient({
-  uri: 'http://localhost:1337/graphql',
-  cache: new InMemoryCache()
-})
+  uri: "http://localhost:1337/graphql",
+  cache: new InMemoryCache(),
+});
 
 function MyApp({ Component, pageProps }) {
-  return <>
-    <ApolloProvider client={client}>
-      <Header />
-      <Component {...pageProps} />
-      <FooterContext>
-        <Footer />
-      </FooterContext>
-    </ApolloProvider>
-  </>
+  return (
+    <>
+      <ApolloProvider client={client}>
+        <Header />
+        <Head>
+          <link rel="shortcut icon" href="/favicon/favicon.ico" />
+          <title>Saj Estate | Get Your Perfect Home</title>
+          <meta name="viewport" content="width=device-width,initial-scale=1" />
+        </Head>
+        <Component {...pageProps} />
+        <FooterContext>
+          <Footer />
+        </FooterContext>
+      </ApolloProvider>
+    </>
+  );
 }
 
-export default MyApp
+export default MyApp;
