@@ -9,7 +9,7 @@ This is a website where you can rent or buy houses. I have designed and develope
 
 ## Live Preview
 
-![Logo](https://im.ezgif.com/tmp/ezgif-1-3ebc158ddb.gif)
+![demo](demo/demo.gif)
 
 ## Technologies 
 
