@@ -1,11 +1,14 @@
 # Saj Estate  - Find your ideal home to buy or rent
 
-This is a website where you can rent or buy houses. I have designed and developed this website using Next JS and Sass. I have used Strapi headless CMS for the backend and React Context API to manage states. I have also used Graphql and Apollo client to fetch data from the backend. To create this project, I have taken inspiration from various themes and templates.
+A property listing website that shows information about properties which can a user buy or rent. <br>
+I have used Next JS and Sass to build the UI, and Strapi as a backend. I have used <br> Graphql to fetch data and Context API to manage states. 
+
 
 ## Links
 
 - Solution URL: https://github.com/sajibhn/saj-estate
 - Live Site URL: couldn't deploy because of a technical issue
+- Video Preview: https://youtu.be/rYrmswknS48
 
 ## Live Preview
 
