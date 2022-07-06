@@ -1,4 +1,4 @@
-# Saj Estate  - Find your ideal home to buy or rent
+# Saj Estate - Find your ideal home to buy or rent
 
 This is a website where you can rent or buy houses. I have designed and developed this website using Next JS and Sass. I have used Strapi headless CMS for the backend and React Context API to manage states. I have also used Graphql and Apollo client to fetch data from the backend. To create this project, I have taken inspiration from various themes and templates.
 
@@ -9,9 +9,9 @@ This is a website where you can rent or buy houses. I have designed and develope
 
 ## Live Preview
 
-![Logo](https://im.ezgif.com/tmp/ezgif-1-3ebc158ddb.gif)
+![demo](demo/demo.gif)
 
-## Technologies 
+## Technologies
 
 - Next JS - [Link](https://nextjs.org/)
 - Node-SASS - [Link](https://www.npmjs.com/package/node-sass)
@@ -27,19 +27,18 @@ This is a website where you can rent or buy houses. I have designed and develope
 - Strapi backend
 - Mobile responsive
 
-
 ## What I learned
 
 - I learned about React JS components, JSX, state management
 - I learned about Next JS file based routing
 - I learned about SASS
 - I learned about Strapi headless CMS
-- I learned about React  Context API
+- I learned about React Context API
 
 ## Author
 
- - Sajib Hossain - [twitter](https://twitter.com/sajib_hsn)
- - Sajib Hossain - [Linked in](https://www.linkedin.com/in/sajib-hossain-17929b225/)
+- Sajib Hossain - [twitter](https://twitter.com/sajib_hsn)
+- Sajib Hossain - [Linked in](https://www.linkedin.com/in/sajib-hossain-17929b225/)
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 

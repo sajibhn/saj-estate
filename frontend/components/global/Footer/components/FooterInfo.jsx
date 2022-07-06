@@ -7,7 +7,7 @@ const FooterInfo = () => {
     const { loading, error, data } = FooterState();
     if (loading) return <p>Loading</p>
     if (error) return <p>There is an error</p>
-    const { location, phone, email } = data.footer.data.attributes
+    const { location, phone, email } = data?.footer?.data?.attributes
     return (
         <div className="footer__info">
             <h3>Contact Information</h3>

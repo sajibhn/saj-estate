@@ -11,7 +11,6 @@ query GetAbout {
       attributes{
         page_title
         about_details_title
-        about_details_description
         team_title
         team_details
       }
@@ -28,12 +27,11 @@ query GetAbout {
   }
   teamLists{
     data{
-      id
       attributes{
         image{
           data{
             attributes{
-              url
+               url
             }
           }
         }
@@ -43,39 +41,38 @@ query GetAbout {
       }
     }
   }
-  testimonialCards {
-      data {
-        id
-        attributes {
-          client_name
-          client_postion
-          client_review
-          client_rating
-          client_image {
-            data {
-              attributes {
-                url
-              }
+  testimonialcards{
+    data{
+      attributes{
+        client_image{
+          data{
+            attributes{
+              url
             }
           }
         }
+        client_name
+        client_position
+        client_review
+        client_rating
       }
     }
+  }
 }
 `;
 
 
 const AboutContext = ({ children }) => {
-    const { loading, error, data } = useQuery(AboutInfo)
-    return (
-        <AboutData.Provider value={{ loading, error, data }}>
-            {children}
-        </AboutData.Provider>
-    )
+  const { loading, error, data } = useQuery(AboutInfo)
+  return (
+    <AboutData.Provider value={{ loading, error, data }}>
+      {children}
+    </AboutData.Provider>
+  )
 }
 
 export default AboutContext;
 
 export const AboutState = () => {
-    return useContext(AboutData)
+  return useContext(AboutData)
 }

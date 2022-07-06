@@ -9,7 +9,7 @@ const ProcessCard = () => {
         <div className="process__card__container">
 
             {
-                data.processCards.data.map((card, index) => {
+                data.processcards.data.map((card, index) => {
                     const { number, title, description } = card.attributes
                     return (
                         <>

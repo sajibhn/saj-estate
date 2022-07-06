@@ -5,7 +5,7 @@ const FooterData = createContext();
 
 const FooterInformation = gql`
 query GetFooterInfo {
-    footer{
+  footer{
     data{
       attributes{
         location
@@ -18,15 +18,15 @@ query GetFooterInfo {
 `;
 
 const FooterContext = ({ children }) => {
-    const { loading, error, data } = useQuery(FooterInformation);
+  const { loading, error, data } = useQuery(FooterInformation);
 
-    return <FooterData.Provider value={{ loading, error, data }}>
-        {children}
-    </FooterData.Provider>;
+  return <FooterData.Provider value={{ loading, error, data }}>
+    {children}
+  </FooterData.Provider>;
 };
 
 export default FooterContext;
 
 export const FooterState = () => {
-    return useContext(FooterData);
+  return useContext(FooterData);
 };

@@ -6,19 +6,17 @@ const ContactData = createContext()
 
 const ContactInfo = gql`
 query GetContact {
-contact{
-  data{
-    attributes{
-      page_title
-      contact_description
-      head_q_location
+  contact{
+      data{
+        attributes{
+          page_title
+          contact_description
+          head_q_location
+        }
+      }
     }
-  }
-}
-  
   contactLists{
     data{
-      id
       attributes{
         name
         location
@@ -30,16 +28,16 @@ contact{
 `
 
 const ContactContext = ({ children }) => {
-    const { loading, error, data } = useQuery(ContactInfo)
-    return (
-        <ContactData.Provider value={{ loading, error, data }}>
-            {children}
-        </ContactData.Provider>
-    )
+  const { loading, error, data } = useQuery(ContactInfo)
+  return (
+    <ContactData.Provider value={{ loading, error, data }}>
+      {children}
+    </ContactData.Provider>
+  )
 }
 
 export default ContactContext
 
 export const ContactState = () => {
-    return useContext(ContactData)
+  return useContext(ContactData)
 }

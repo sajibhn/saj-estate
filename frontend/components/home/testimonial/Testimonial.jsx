@@ -13,40 +13,39 @@ const TestimonialCardQuery = gql`
         }
       }
     }
-  testimonialCards {
-      data {
-        id
-        attributes {
-          client_name
-          client_postion
-          client_review
-          client_rating
-          client_image {
-            data {
-              attributes {
-                url
-              }
+    testimonialcards{
+    data{
+      attributes{
+        client_image{
+          data{
+            attributes{
+              url
             }
           }
         }
+        client_name
+        client_position
+        client_review
+        client_rating
+        
       }
     }
+  }
 }
 `
 
 const Testimonial = () => {
-    const { loading, error, data } = useQuery(TestimonialCardQuery)
-    if (loading) return <p>Loading</p>
-    if (error) return <p>There is an error</p>
-    console.log(data.home.data.attributes)
-    const { testimonial_title, testimonial_description } = data.home.data.attributes;
+  const { loading, error, data } = useQuery(TestimonialCardQuery)
+  if (loading) return <p>Loading</p>
+  if (error) return <p>There is an error</p>
+  const { testimonial_title, testimonial_description } = data.home.data.attributes;
 
-    return (
-        <section className="testimonial section ">
-            <SectionTitle title={testimonial_title} description={testimonial_description} />
-            <TestimonialCard data={data} loading={loading} />
-        </section>
-    )
+  return (
+    <section className="testimonial section ">
+      <SectionTitle title={testimonial_title} description={testimonial_description} />
+      <TestimonialCard data={data} loading={loading} />
+    </section>
+  )
 }
 
 export default Testimonial

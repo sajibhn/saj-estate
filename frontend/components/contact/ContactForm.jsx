@@ -5,7 +5,6 @@ const ContactForm = () => {
     const { loading, error, data } = ContactState()
     if (loading) return <p>Loading ...</p>
     if (error) return <p>there is a error</p>
-
     const formHandler = (e) => {
         e.preventDefault()
         return alert('the form is not dynamic!')

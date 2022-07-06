@@ -42,8 +42,8 @@ const ListingCard = ({ data, simplified, loading }) => {
 
                 {
                     listingDatas?.slice(0, count).map((item, index) => {
-                        const { title, location, price, description, bedrooms, bathrooms, garage, featured_image } = item.attributes
-                        const fImage = featured_image.data.attributes.url
+                        const { title, location, price, description, bedrooms, bathrooms, garage } = item.attributes
+                        const fImage = item.attributes.featured_image.data[0].attributes.url
                         return (
                             <>
                                 <Link href={`/property/${index}`}>

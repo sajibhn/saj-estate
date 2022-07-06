@@ -11,11 +11,11 @@ const ContactDetails = () => {
                 <div className="contact__details__one">
                     <h4>For inquiries contact</h4>
 
-                    {data.contactLists.data.map((item) => {
+                    {data.contactLists.data.map((item, index) => {
                         const { name, location, email } = item.attributes
                         return (
                             <>
-                                <div className="person__info" key={item.id}>
+                                <div className="person__info" key={index}>
                                     <h4>{name}</h4>
                                     <p>{location}</p>
                                     <p>{email}</p>

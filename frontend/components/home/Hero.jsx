@@ -9,6 +9,7 @@ const Hero = () => {
     const backgroundImage = hero_bg.data.attributes.url;
     const bgImage = `linear-gradient(rgba(6, 42, 71, 0.705), rgba(6, 42, 71, 0.705)),
     url(${backgroundImage})`
+    console.log(data.listings.data[0].attributes)
     return (
         <section className="hero" style={{ backgroundImage: bgImage }}>
             <div className='hero__overlay'></div>

@@ -15,43 +15,45 @@ export default index;
 
 export async function getStaticProps() {
   const client = new ApolloClient({
-    uri: "http://localhost:1337/graphql",
+    uri: "https://dry-brook-90780.herokuapp.com/graphql",
     cache: new InMemoryCache(),
   });
   const { loading, error, data } = await client.query({
     query: gql`
       query {
-        listings {
-          data {
-            attributes {
-              featured_image {
-                data {
-                  attributes {
-                    url
-                  }
-                }
+        listings{
+    data{
+      attributes{
+          featured_image{
+            data{
+              attributes{
+                url
               }
-              gallery {
-                data {
-                  attributes {
-                    url
-                  }
-                }
-              }
-              title
-              type
-              location
-              price
-              area
-              property_type
-              bedrooms
-              bathrooms
-              garage
-              sq_ft
-              description
+            }
+          }
+        gallery{
+           data{
+             attributes{
+              url
             }
           }
         }
+        title
+        type
+         location
+        price
+        area
+         property_type
+        bedrooms
+        bathrooms
+        garage
+        sq_ft
+         description
+        year_built
+        
+      }
+    }
+  }
       }
     `,
   });

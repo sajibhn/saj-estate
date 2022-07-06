@@ -6,7 +6,7 @@ import FooterContext from "../data/FooterContext";
 import Head from "next/head";
 
 const client = new ApolloClient({
-  uri: "http://localhost:1337/graphql",
+  uri: "https://dry-brook-90780.herokuapp.com/graphql",
   cache: new InMemoryCache(),
 });
 

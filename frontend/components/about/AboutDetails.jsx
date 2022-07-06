@@ -7,7 +7,6 @@ const AboutDetails = () => {
     if (loading) return <p>Loading</p>
     if (error) return <p>There is an error</p>
     const { about_details_title, about_details_description } = data.about.data.attributes
-
     return (
         <section className="about__details section">
             <SectionTitle title={about_details_title} description={about_details_description} />

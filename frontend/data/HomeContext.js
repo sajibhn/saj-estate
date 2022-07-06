@@ -30,7 +30,7 @@ const ProcessCards = gql`
         }
       }
     }
-    processCards {
+    processcards {
       data {
         attributes {
           number
@@ -39,24 +39,26 @@ const ProcessCards = gql`
         }
       }
     }
-    testimonialCards {
-      data {
-        attributes {
-          client_name
-          client_postion
-          client_review
-          client_rating
-          client_image {
-            data {
-              attributes {
-                url
-              }
+    testimonialcards{
+    data{
+      attributes{
+        client_image{
+          data{
+            attributes{
+              url
             }
           }
         }
+        client_name
+        client_position
+        client_review
+        client_rating
+        
       }
     }
-    listings{
+  }
+  listings{
+    
     data{
       attributes{
         featured_image{
@@ -72,7 +74,7 @@ const ProcessCards = gql`
         area
         bedrooms
         bathrooms
-        garage
+         garage
         description
       }
     }
