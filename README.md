@@ -7,8 +7,7 @@ I have used Next JS and Sass to build the UI, and Strapi as a backend. I have us
 ## Links
 
 - Solution URL: https://github.com/sajibhn/saj-estate
-- Live Site URL: couldn't deploy because of a technical issue
-- Video Preview: https://youtu.be/rYrmswknS48
+- Live Site URL: https://saj-estate.vercel.app/
 
 ## Live Preview
 
