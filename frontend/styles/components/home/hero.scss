@@ -5,6 +5,10 @@
   z-index: 1;
   color: $white;
   @extend .flex-center;
+  @include sm {
+    min-height: 0px;
+    padding: 100px 0 150px 0;
+  }
 
   &__data {
     max-width: 650px;

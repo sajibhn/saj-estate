@@ -7,6 +7,7 @@
   .testimonial__card {
     box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
     padding: $p8 $p6;
+    background-color: $white;
 
     &__head {
       @extend .flex-center;
