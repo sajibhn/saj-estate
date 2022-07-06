@@ -12,16 +12,13 @@
   "pluginOptions": {},
   "attributes": {
     "location": {
-      "type": "string",
-      "required": true
+      "type": "string"
     },
     "phone": {
-      "type": "string",
-      "required": true
+      "type": "string"
     },
     "email": {
-      "type": "string",
-      "required": true
+      "type": "string"
     }
   }
 }

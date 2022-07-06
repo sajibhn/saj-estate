@@ -12,8 +12,7 @@
   "pluginOptions": {},
   "attributes": {
     "page_title": {
-      "type": "string",
-      "required": true
+      "type": "string"
     },
     "contact_description": {
       "type": "text"

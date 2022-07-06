@@ -4,8 +4,7 @@
   "info": {
     "singularName": "about",
     "pluralName": "abouts",
-    "displayName": "About",
-    "description": ""
+    "displayName": "About"
   },
   "options": {
     "draftAndPublish": true
@@ -13,24 +12,19 @@
   "pluginOptions": {},
   "attributes": {
     "page_title": {
-      "type": "string",
-      "required": true
+      "type": "string"
     },
     "about_details_title": {
-      "type": "string",
-      "required": true
+      "type": "string"
     },
     "about_details_description": {
-      "type": "text",
-      "required": true
+      "type": "text"
     },
     "team_title": {
-      "type": "string",
-      "required": true
+      "type": "string"
     },
     "team_details": {
-      "type": "text",
-      "required": true
+      "type": "text"
     }
   }
 }

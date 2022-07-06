@@ -1,16 +1,19 @@
 {
   "kind": "collectionType",
-  "collectionName": "about_description_lists",
+  "collectionName": "processcards",
   "info": {
-    "singularName": "about-description-list",
-    "pluralName": "about-description-lists",
-    "displayName": "About Description List"
+    "singularName": "processcard",
+    "pluralName": "processcards",
+    "displayName": "Processcard"
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
+    "number": {
+      "type": "string"
+    },
     "title": {
       "type": "string"
     },

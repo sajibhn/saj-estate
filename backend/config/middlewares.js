@@ -7,15 +7,7 @@ module.exports = [
         useDefaults: true,
         directives: {
           'connect-src': ["'self'", 'https:'],
-          "img-src": [
-            "'self'",
-            "data:",
-            "blob:",
-            "res.cloudinary.com", // cloudinary images
-            "lh3.googleusercontent.com", // google avatars
-            "platform-lookaside.fbsbx.com", // facebook avatars
-            "dl.airtable.com", // strapi marketplace
-          ],
+          'img-src': ["'self'", 'data:', 'blob:', 'res.cloudinary.com'],
           'media-src': ["'self'", 'data:', 'blob:', 'res.cloudinary.com'],
           upgradeInsecureRequests: null,
         },

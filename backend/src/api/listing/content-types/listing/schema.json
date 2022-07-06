@@ -14,7 +14,7 @@
   "attributes": {
     "featured_image": {
       "type": "media",
-      "multiple": false,
+      "multiple": true,
       "required": false,
       "allowedTypes": [
         "images"
@@ -59,7 +59,7 @@
       "type": "integer"
     },
     "description": {
-      "type": "richtext"
+      "type": "text"
     },
     "year_built": {
       "type": "string"

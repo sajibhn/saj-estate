@@ -10,20 +10,21 @@
     "strapi": "strapi"
   },
   "dependencies": {
-    "@strapi/plugin-graphql": "^4.2.0",
-    "@strapi/plugin-i18n": "4.2.0",
-    "@strapi/plugin-users-permissions": "4.2.0",
-    "@strapi/provider-upload-cloudinary": "^4.2.0",
-    "@strapi/strapi": "4.2.0",
+    "@strapi/plugin-graphql": "^4.2.2",
+    "@strapi/plugin-i18n": "4.2.2",
+    "@strapi/plugin-users-permissions": "4.2.2",
+    "@strapi/provider-upload-cloudinary": "^4.2.2",
+    "@strapi/strapi": "4.2.2",
     "better-sqlite3": "7.4.6",
     "pg": "^8.7.3",
-    "pg-connection-string": "^2.5.0"
+    "pg-connection-string": "^2.5.0",
+    "serve": "^13.0.2"
   },
   "author": {
     "name": "A Strapi developer"
   },
   "strapi": {
-    "uuid": "e6f750b0-81cb-4883-9802-3c22956686d9"
+    "uuid": "6fd50501-5522-4589-88e3-e2c4c338cbcd"
   },
   "engines": {
     "node": ">=12.x.x <=16.x.x",

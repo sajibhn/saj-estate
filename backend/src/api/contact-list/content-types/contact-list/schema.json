@@ -12,15 +12,13 @@
   "pluginOptions": {},
   "attributes": {
     "name": {
-      "type": "string",
-      "required": true
+      "type": "string"
     },
     "location": {
       "type": "string"
     },
     "email": {
-      "type": "string",
-      "required": true
+      "type": "string"
     }
   }
 }

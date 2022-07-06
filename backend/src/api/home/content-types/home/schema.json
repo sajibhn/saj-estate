@@ -4,58 +4,13 @@
   "info": {
     "singularName": "home",
     "pluralName": "homes",
-    "displayName": "home",
-    "description": ""
+    "displayName": "Home"
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "page_title": {
-      "type": "string",
-      "required": true,
-      "default": "Home"
-    },
-    "hero_title": {
-      "type": "string",
-      "required": true
-    },
-    "hero_description": {
-      "type": "text",
-      "required": true
-    },
-    "process_title": {
-      "type": "string",
-      "required": true
-    },
-    "process_description": {
-      "type": "text",
-      "required": true
-    },
-    "listing_title": {
-      "type": "string",
-      "required": true
-    },
-    "listing_description": {
-      "type": "text",
-      "required": true
-    },
-    "cta_title": {
-      "type": "string"
-    },
-    "cta_description": {
-      "type": "text",
-      "required": true
-    },
-    "testimonial_title": {
-      "type": "string",
-      "required": true
-    },
-    "testimonial_description": {
-      "type": "text",
-      "required": true
-    },
     "hero_bg": {
       "allowedTypes": [
         "images"
@@ -63,6 +18,40 @@
       "type": "media",
       "multiple": false,
       "required": true
+    },
+    "page_title": {
+      "type": "string",
+      "required": true
+    },
+    "hero_title": {
+      "type": "string"
+    },
+    "hero_description": {
+      "type": "text"
+    },
+    "process_title": {
+      "type": "string"
+    },
+    "process_description": {
+      "type": "text"
+    },
+    "listing_title": {
+      "type": "string"
+    },
+    "listing_description": {
+      "type": "text"
+    },
+    "cta_title": {
+      "type": "string"
+    },
+    "cta_description": {
+      "type": "text"
+    },
+    "testimonial_title": {
+      "type": "string"
+    },
+    "testimonial_description": {
+      "type": "text"
     }
   }
 }

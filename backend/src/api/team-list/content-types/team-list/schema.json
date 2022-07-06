@@ -19,16 +19,13 @@
       "multiple": false
     },
     "name": {
-      "type": "string",
-      "required": true
+      "type": "string"
     },
     "role": {
-      "type": "string",
-      "required": true
+      "type": "string"
     },
     "details": {
-      "type": "text",
-      "required": true
+      "type": "string"
     }
   }
 }
