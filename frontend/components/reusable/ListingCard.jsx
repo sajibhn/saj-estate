@@ -4,6 +4,7 @@ import { MdBed } from 'react-icons/md'
 import { FaShower } from 'react-icons/fa'
 import { AiFillCar } from 'react-icons/ai'
 import Link from 'next/link'
+import Loader from './Loader'
 
 const ListingCard = ({ data, simplified, loading }) => {
     const [listingDatas, setListingData] = useState(data?.listings?.data)
@@ -25,12 +26,11 @@ const ListingCard = ({ data, simplified, loading }) => {
         setActive(e.target.id);
     }
 
-    if (loading) return <p>Loading....</p>
+    if (loading) return <Loader />
     return (
         <>
             {!simplified && <>
                 <div className="filter">
-                    <h2>Filter</h2>
                     <div className="filter__buttons">
                         <button key={1} className={active === '1' ? 'filter_active' : undefined} id={'1'} onClick={All}>all</button>
                         <button key={2} className={active === '2' ? 'filter_active' : undefined} id={'2'} onClick={ForSell}>for sell</button>

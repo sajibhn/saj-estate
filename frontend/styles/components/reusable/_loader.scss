@@ -1,0 +1,8 @@
+.loader {
+  min-height: 100vh;
+  @extend .flex-center;
+
+  .tail-spin-loading {
+    display: initial;
+  }
+}

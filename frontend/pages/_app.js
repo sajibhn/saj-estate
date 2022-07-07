@@ -1,4 +1,5 @@
 import "../styles/main.scss";
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import Header from "../components/global/Header/Header";
 import Footer from "../components/global/Footer/Footer";
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";

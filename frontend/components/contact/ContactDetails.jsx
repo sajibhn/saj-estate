@@ -1,9 +1,10 @@
 import React from "react";
 import { ContactState } from "../../data/ContactContext";
+import Loader from "../reusable/Loader";
 
 const ContactDetails = () => {
     const { loading, error, data } = ContactState()
-    if (loading) return <p>Loading ...</p>
+    if (loading) return <Loader />
     if (error) return <p>there is a error</p>
     return (
         <div className="contact__details">

@@ -1,9 +1,10 @@
 import React from 'react'
 import { HomeState } from '../../data/HomeContext'
+import Loader from '../reusable/Loader'
 
 const Hero = () => {
     const { loading, error, data } = HomeState()
-    if (loading) return <p>Loading</p>
+    if (loading) return <Loader />
     if (error) return <p>There is an error</p>
     const { hero_title, hero_description, hero_bg } = data.home.data.attributes;
     const backgroundImage = hero_bg.data.attributes.url;

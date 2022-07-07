@@ -1,11 +1,12 @@
 import React from 'react'
 import { AboutState } from '../../data/AboutContext'
+import Loader from '../reusable/Loader'
 import SectionTitle from '../reusable/SectionTitle'
 import TeamDetails from './TeamDetails'
 
 const Team = () => {
     const { loading, error, data } = AboutState()
-    if (loading) return <p>Loading</p>
+    if (loading) return <Loader />
     if (error) return <p>There is an error</p>
     const { team_title, team_details } = data?.about?.data?.attributes
 

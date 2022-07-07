@@ -1,7 +1,9 @@
 import React from "react";
 import ListingCard from "../../components/reusable/ListingCard";
 import { gql, ApolloClient, InMemoryCache } from "@apollo/client";
+import Loader from "../../components/reusable/Loader";
 const index = ({ data, loading }) => {
+  if (loading) return <Loader />
   return (
     <div>
       <div className="home__listing__container container">

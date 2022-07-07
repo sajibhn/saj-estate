@@ -1,9 +1,10 @@
 import React from 'react'
 import Link from 'next/link'
 import { HomeState } from '../../data/HomeContext'
+import Loader from '../reusable/Loader'
 const Cta = () => {
     const { loading, error, data } = HomeState()
-    if (loading) return <p>Loading</p>
+    if (loading) return <Loader />
     if (error) return <p>There is an error</p>
     const { cta_title, cta_description } = data.home.data.attributes;
     return (

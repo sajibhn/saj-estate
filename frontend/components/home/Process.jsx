@@ -2,10 +2,11 @@ import React from 'react'
 import ProcessCard from '../reusable/ProcessCard'
 import SectionTitle from '../reusable/SectionTitle'
 import { HomeState } from '../../data/HomeContext'
+import Loader from '../reusable/Loader'
 
 const Process = () => {
     const { loading, error, data } = HomeState()
-    if (loading) return <p>Loading</p>
+    if (loading) return <Loader />
     if (error) return <p>There is an error</p>
     const { process_title, process_description } = data.home.data.attributes;
     return (
